@@ -121,7 +121,7 @@ HiggsCSandWidthSM4::HiggsCSandWidthSM4()
   N_CSE = 175;
   N_BR_gg = 6;
 
-  ifstream file;
+  std::ifstream file;
   double scratchHgg;
   // Read Widths into memory
   file.open((std::string(getenv("CMSSW_BASE"))+std::string("/src/HiggsAnalysis/HiggsToTauTau/data/SM4/Higgs_BR_SM4.txt")).c_str());

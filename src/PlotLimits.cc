@@ -375,7 +375,7 @@ PlotLimits::higgsConstraint(const char* model, const char* type)
   for(double mass=masslow; mass<masshigh+1; mass=mass+massstep){
     std::string line;
     float tanb, mh, mA, mH, mHp;
-    ifstream higgs (TString::Format("HiggsAnalysis/HiggsToTauTau/data/Higgs125/%s/higgs_%d.dat", model, (int)mass)); 
+    std::ifstream higgs (TString::Format("HiggsAnalysis/HiggsToTauTau/data/Higgs125/%s/higgs_%d.dat", model, (int)mass)); 
     //std::cout << TString::Format("HiggsAnalysis/HiggsToTauTau/data/Higgs125/%s/higgs_%d.dat", model, (int)mass) << std::endl;
     if(higgs.is_open()){
       while(higgs.good()){

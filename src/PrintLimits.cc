@@ -4,7 +4,7 @@
 PlotLimits::print(const char* filename, std::string& xval, std::string& yval, std::vector<TGraph*> contour, const char* type)
 {
   if(std::string(type) == std::string("tex")){
-    ofstream file;
+    std::ofstream file;
     file.open (std::string(filename).append(".tex").c_str());
     file
       << "   " << std::setw(15) << std::right << xval << " (pb) " 
@@ -23,7 +23,7 @@ PlotLimits::print(const char* filename, std::string& xval, std::string& yval, st
     }
   }
   if(std::string(type) == std::string("txt")){
-    ofstream file;
+    std::ofstream file;
     file.open (std::string(filename).append(".txt").c_str());
     file
       << "   " << std::setw(15) << std::right << xval 
@@ -45,7 +45,7 @@ void
 PlotLimits::print(const char* filename, std::string& xval, std::string& yval, TGraph* contour, const char* type)
 {
   if(std::string(type) == std::string("tex")){
-    ofstream file;
+    std::ofstream file;
     file.open (std::string(filename).append(".tex").c_str());
     file
       << "   " << std::setw(15) << std::right << xval << " (pb) " 
@@ -62,7 +62,7 @@ PlotLimits::print(const char* filename, std::string& xval, std::string& yval, TG
       }
   }
   if(std::string(type) == std::string("txt")){
-    ofstream file;
+    std::ofstream file;
     file.open (std::string(filename).append(".txt").c_str());
     file
       << "   " << std::setw(15) << std::right << xval 
@@ -82,7 +82,7 @@ void
 PlotLimits::print(const char* filename, TGraphAsymmErrors* outerBand, TGraphAsymmErrors* innerBand, TGraph* expected, TGraph* observed, const char* type)
 {
   if(std::string(type) == std::string("tex")){
-    ofstream file;
+    std::ofstream file;
     file.open (std::string(filename).append(".tex").c_str());
     file
       << "   " << std::setw(15) << std::right << "    $m_{\\mathrm H}$";
@@ -185,7 +185,7 @@ PlotLimits::print(const char* filename, TGraphAsymmErrors* outerBand, TGraphAsym
     file.close();
   }
   if(std::string(type) == std::string("txt")){
-    ofstream file;
+    std::ofstream file;
     file.open (std::string(filename).append(".txt").c_str());
     file
       << "#"
@@ -235,7 +235,7 @@ void
 PlotLimits::print(const char* filename, TGraph* expected, TGraph* observed, const char* type)
 {
   if(std::string(type) == std::string("tex")){
-    ofstream file;
+    std::ofstream file;
     file.open (std::string(filename).append(".tex").c_str());
     file
       << "   " << std::setw(15) << std::right << "    $m_{\\mathrm H}$"
@@ -267,7 +267,7 @@ PlotLimits::print(const char* filename, TGraph* expected, TGraph* observed, cons
     file.close();
   }
   if(std::string(type) == std::string("txt")){
-    ofstream file;
+    std::ofstream file;
     file.open (std::string(filename).append(".txt").c_str());
     file
       << "#"
@@ -301,7 +301,7 @@ PlotLimits::print(const char* filename, TGraph* expected, TGraph* observed, cons
 void
 PlotLimits::print(const char* filename, std::vector<TGraph*> minus2sigma, std::vector<TGraph*> minus1sigma, std::vector<TGraph*> expected, std::vector<TGraph*> plus1sigma, std::vector<TGraph*> plus2sigma, std::vector<TGraph*> observed, double tanbLow, double tanbHigh, float *mass, const char* type)
 {
-  ofstream file;
+  std::ofstream file;
   if(std::string(type) == std::string("tex")){
     file.open (std::string(filename).append(".tex").c_str());
     file

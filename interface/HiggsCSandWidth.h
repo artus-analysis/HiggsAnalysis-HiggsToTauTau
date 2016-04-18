@@ -98,7 +98,7 @@ HiggsCSandWidth::HiggsCSandWidth()
   N_BR = 217;
   N_CS = 197;
 
-  ifstream file;
+  std::ifstream file;
  
   // Read Widths into memory
   FileLoc = std::string(getenv("CMSSW_BASE"))+std::string("/src/HiggsAnalysis/HiggsToTauTau/data/SM4/HiggsBR_7TeV_Official.txt"); //directory of input file

@@ -383,7 +383,7 @@ void compareThetaCombine(const char* filename, const char* channelstr, double mi
 
   TGraph* theta_graph = new TGraph();
   int n=-1; // first entry is off
-  ifstream in ("theta/htt/nll.txt");
+  std::ifstream in ("theta/htt/nll.txt");
   while (in) {
     string line;
     getline (in, line);
